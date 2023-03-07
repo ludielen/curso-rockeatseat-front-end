@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #E5E5E5;
+}
+
+body::before {
+    content:'';
+    width: 100%;
+    height: 465px;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+    background-color:#293241;
+}
+
+.page {
+    width: 750px;
+    margin: auto;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 107px;
+}
+
+header h1{
+    width: 282px;
+    font-family: 'Staatliches', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 45px;
+    color: #FFFFFF
+}
+
+header p{
+    width: 391px;
+    height: 46px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #FFFFFF
+}
+
+header img {
+    width: 225px;
+    height: 100px;
+    margin-bottom: 32px;
+}
+
+form {
+    margin: auto auto 20px;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 20px 20px;
+}
+
+form fieldset {
+    border: none;
+}
+
+form fieldset .information-wrapper .personal-information {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+form .top-wrapper {
+    border-radius: 20px 20px 0px 0px;
+    background-color:#F67669 ;
+}
+
+form fieldset .top-wrapper legend {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+
+    padding: 50px 275px;
+    color: #FFFFFF;
+}
+
+form fieldset .information-wrapper, form fieldset .next-mentoring-schedule .date-and-time-inputs
+{
+    padding: 31px 64px;
+}
+
+form fieldset .information-wrapper .input-wrapper,
+form fieldset .information-wrapper .select-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+    
+}
+
+form fieldset label{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color:#4E4958;
+}
+
+form fieldset span {
+    color: #C1BCCC;
+    margin-left: 6px;
+}
+
+form fieldset .information-wrapper .input-wrapper input,
+form fieldset .information-wrapper .select-wrapper #mentor,
+form fieldset .feedback-wrapper #mensage,
+form fieldset .next-mentoring-schedule .date-and-time-inputs .date-inputs #date-input{
+    width: 300px;
+    height: 55px;
+    border-radius: 8px;
+    background-color: #E6E6F0;
+    border: 1px solid #FAFAFC;
+    padding:20px;
+}
+
+form .information-wrapper .input-wrapper #email {
+    width: 622px;
+}
+
+form fieldset .mentor-information,
+form fieldset .next-mentoring-schedule legend {
+    width: 622px;
+    margin: 0 auto;
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 34px;
+    color: #253B51; 
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E6E6F0;
+}
+
+form fieldset .information-wrapper .select-wrapper #mentor {
+    appearance: none;
+}
+
+form fieldset .information-wrapper .feedback-wrapper #mensage {   
+    width: 608px;
+    height: 166px;
+    margin-top: 8px;
+    appearance: none;
+    resize: none;
+}
+
+form fieldset .information-wrapper .box-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 30px;
+}
+form fieldset .information-wrapper .box-wrapper #box {
+    width: 24px;
+    height: 23px;
+    border-radius: 8px;
+    background-color: #E6E6F0;
+    border: 1px solid #FAFAFC;
+}
+
+form fieldset .next-mentoring-schedule .date-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+form fieldset .next-mentoring-schedule .date-and-time-inputs .date-inputs #start-time-input, form fieldset .next-mentoring-schedule .date-and-time-inputs .date-inputs #end-time-input {
+    width: 140px;
+    height: 55px;
+    border-radius: 8px;
+    background-color: #E6E6F0;
+    border: 1px solid #FAFAFC;
+    text-align: center;
+    padding: 15px;
+}
+
+form fieldset .next-mentoring-schedule .date-and-time-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+form .save-button {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    background: #F67669;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    margin: 35px 64px 66px;
+    border-radius: 8px;
+    border: none;
+}
