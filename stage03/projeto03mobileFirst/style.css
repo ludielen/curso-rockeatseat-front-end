@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-heading-first: #ffffff;
+    --color-bg-first: #CBC0D3;
+    --color-main-text: #23053A;
+    --color-bg-main-page: #EFF1FF;
+    --color-heading-menu:  #4A4E69;
+    --color-bg-menu: #FEEAFA;
+
+    --main-font-family: 'Staatliches', cursive;
+    --secondary-font-family: 'Palanquin', sans-serif;
+}
+body{
+    font-family: var(--secondary-font-family);
+    background-color: var(--color-bg-main-page);
+} 
+
+.page {
+  /*  max-width: 24rem;*/
+    margin: 0 auto;
+}
+header{
+    background-color: #8E9AAF;
+    padding: 2rem 0 2rem;
+}
+
+header .logo-sorvete {
+    display: block;
+    margin: 0 auto;   
+}
+
+header h1 {
+    font-family: var(--main-font-family);
+    font-size: 2.5rem; /*40px*/
+    background-color: var(--color-bg-first);
+    color: var(--color-heading-first);
+    letter-spacing: 5px;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    font-weight: 400;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+section {
+    display: grid;
+    gap: 2rem;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding-bottom: 3.7rem;
+}
+
+section .main-text p{
+    color: var(--color-main-text);
+    font-family: var(--secondary-font-family);
+    font-weight: 400;
+    text-align: center;
+    padding: 0.6rem;
+    margin-bottom: 3.3rem;
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+}
+
+section .menu-flavors {
+    position: relative;
+    text-align: center;
+}
+
+section .menu-flavors img {
+    animation-name: animate-image;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+
+section .menu-flavors h2{
+    font-family: var(--main-font-family);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 2.1rem;
+    color: var(--color-heading-menu);
+    background-color: var(--color-bg-menu);
+    border-radius: 1.2rem;
+    letter-spacing: 0.05em;
+    margin: 1rem 1rem 0;
+    padding: 0.06rem 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-name: slide-in-from-top;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+/*animação imagem*/
+@keyframes animate-image {
+    from {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+}
+
+/*animação h2*/
+@keyframes slide-in-from-top { 
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
