@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA Universal</title>
+    <link rel="stylesheet" href="/css/global.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <header id="header-placeholder">
+        <div>
+            <img src="./images/logo.svg" alt="logotipo">
+        </div>
+        
+        <nav class="navBar">
+            <a href="/" onclick="route()">Home</a>
+            <a href="/universo" onclick="route()">O universo</a>
+            <a href="/exploracao" onclick="route()">Exploração</a>
+            <!-- <a href="/404">404</a> -->
+        </nav>
+    </header>
+    
+    <!-- o conteúdo dinâmico será colocado aqui por js -->
+    <div id="content"></div>
+
+     <script>
+
+        const routes = {
+            "/": "pages/home.html",
+            "/universo": "/pages/universo.html",
+            "/exploracao": "/pages/exploracao.html"
+
+        }
+
+        function route(event) {
+        event = event || window.event
+        event.preventDefault()
+
+        history.pushState({}, "", event.target.href)
+
+        handle()
+
+      }
+
+        function handle() {
+            const pathname = location.pathname
+            const route = routes[pathname]
+
+
+            fetch(route)
+            .then(data => data.text())
+            .then(html => {
+                document.querySelector('#content').innerHTML = html
+            })
+        }
+
+        handle()
+
+        onpopstate = () => handle()
+        
+     </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/images/mountain-universe1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(57, 7, 7, 0.847);
+    background-position: center center;
+    height: 100vh;
+    font-family:'Roboto', sans-serif;
+}
+
+header{
+    display: flex;
+    height: 122px;
+  
+}
+
+div {
+    display: grid;
+    align-content: center;
+    margin-left: 6.2rem;
+}
+
+header .navBar {
+    display: flex;
+    justify-content: space-around;
+    width: 30.5rem;
+    align-items: center;
+}
+
+ header .navBar a{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    
+}
+
+header .navBar a:hover {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    /* background-image: url('/images/mountains-universe02.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(57, 7, 7, 0.847);
+    background-position: center center;
+    height: 100vh; */
+
+    display: grid;
+    place-items: center; 
+    margin-top: 11rem;
+    gap: 2rem;
+}
+
+main h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+main button {
+    background: none;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 16px 26px;
+
+}
