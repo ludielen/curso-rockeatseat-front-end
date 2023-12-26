@@ -12,6 +12,14 @@ export const Container  = styled.div`
         margin-top: 4rem;
         padding: 0 11.9rem;
   }
+
+  .handleMovie{
+    display: flex;
+    justify-content: center;
+    color: ${({theme}) => theme.COLORS.GRAY_300};
+    font-size: 15px;
+   
+  }
 `;
  
 export const Brand  = styled.div`
@@ -116,3 +124,4 @@ export const NewNotes = styled(Link)`
         }
     }
 `;
+

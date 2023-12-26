@@ -1,5 +1,5 @@
-import styled from 'styled-components' 
-import {Link} from 'react-router-dom'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const Container = styled.header`
     display: flex;
@@ -9,17 +9,29 @@ export const Container = styled.header`
     width: 100%;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: ${({theme}) => theme.COLORS.BACKGROUND_700}; 
+    border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700}; 
 
     padding: 0 11.9rem;
     background: #1C1B1E;
 
+    >div {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 8px;
+    }
+
 `;
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row-reverse;
+
+    > div img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%; 
+        margin-top: 8px;
+    }  
 `;
 
 export const Logout = styled(Link)`
@@ -33,8 +45,8 @@ export const Logout = styled(Link)`
 
     > div {
         display: flex;
-        gap: 10px;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     > div > div {
@@ -44,25 +56,20 @@ export const Logout = styled(Link)`
 
         > strong {
             font-size: 18px;
-            color: ${({theme}) => theme.COLORS.WHITE};
+            color: ${({ theme }) => theme.COLORS.WHITE};
            
         }  
 
         > svg {
-        color: ${({theme}) => theme.COLORS.GRAY_100};
-        font-size: 14px;
+        color: ${({ theme }) => theme.COLORS.GRAY_100};
+        font-size: 20px;
         margin: 2px;
 
     }
 
     }
 
-    > div img {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%; 
-        margin-top: 8px;
-    }    
+  
 
 `;
 
@@ -72,11 +79,11 @@ export const Search = styled.div`
     > input {
         width: 39.3rem;
         height: 3.5rem;
-        background-color: ${({theme}) => theme.COLORS.GRAY_200};
+        background-color: ${({ theme }) => theme.COLORS.GRAY_200};
         border-radius: 10px;
         border: none;
         padding: 1.5rem;
-        color: ${({theme}) => theme.COLORS.GRAY_100};
+        color: ${({ theme }) => theme.COLORS.GRAY_100};
 
     }
 

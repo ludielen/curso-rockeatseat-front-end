@@ -1,20 +1,43 @@
-import {Container, Brand, Content, NewNotes} from './styles'
-import {Header} from '../../components/header'
+import { Container, Brand, Content, NewNotes } from './styles'
+import { Header } from '../../components/header'
 import { VscAdd } from "react-icons/vsc"
 import { AiOutlineStar } from "react-icons/ai";
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { api } from '../../../../desafio-aplicacao-node/src/services/api'
 
-export function Home(){
-    return(
+export function Home() {
+    const [movies, setMovies] = useState([])
+
+    const [moviesFiltered, setMoviesFiltered] = useState([])
+
+    useEffect(() => {
+        async function fetchTags() {
+            const response = await api.get("/notes/notes");
+            setMovies(response.data)
+            console.log(response.data)
+        }
+
+        fetchTags();
+    }, [])
+
+
+    useEffect(() => {
+        setMovies(moviesFiltered)
+    }, [moviesFiltered])
+
+    return (
         <Container>
-            <Header/>
+            <Header
+                setMoviesFiltered={setMoviesFiltered}
+            />
             <div>
                 <Brand>
                     <div>
                         <h1>Meus Filmes</h1>
                     </div>
                 </Brand>
-                    
+
                 <NewNotes to="createMovie">
                     <div>
                         <div>
@@ -22,135 +45,57 @@ export function Home(){
                         </div>
 
                         <div>
-                          <VscAdd />
+                            <VscAdd />
                         </div>
                     </div>
-               </NewNotes>
+
+
+                </NewNotes>
             </div>
 
-            <Content>
-                <div id="conteudo">
-                    <div>
-                        <h2>Interestellar</h2>
+            <div className="handleMovie">
+                {(() => {
+                    if (movies.length === 0) {
+
+                        return <h3>Não tem filmes adicionados!</h3>
+                    }
+                })()}
+            </div>
+
+            {movies && movies.map(movie => (
+                <Content>
+                    <div key={String(movie.movie_id)} id="conteudo">
+                        <div>
+                            <h2>{movie.movie_title}</h2>
+                        </div>
+
+                        <div id="estrela">
+                            {Array.from({ length: movie.movie_review }, (_, index) => (
+                                <div key={index}>
+                                    <AiOutlineStar />
+                                </div>
+                            ))}
+                        </div>
+
+                        <p>
+                            {movie.movie_description}
+                        </p>
+
+                        <div id="generoFilme">
+                            <ul>
+                                {movie.tag_names && movie.tag_names.map((tag, index) => (
+                                    <li key={index}>{tag}</li>
+                                ))}
+                            </ul>
+                        </div>
+
+
                     </div>
+                </Content>
 
-                    <div id="estrela">
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
+            ))}
 
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                    </div>
-
-                    <p>
-                        Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com a sua familia. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se...
-                    </p>
-
-                    <div id="generoFilme">
-                        <ul>
-                            <li>Ficção Científica</li>
-                            <li>Drama</li>
-                            <li>Família</li>
-                        </ul>
-                    </div>
-                </div>
-                     
-            </Content>
-
-            <Content>
-                <div id="conteudo">
-                    <div>
-                        <h2>Interestellar</h2>
-                    </div>
-
-                    <div id="estrela">
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                    </div>
-
-                    <p>
-                        Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com a sua familia. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se...
-                    </p>
-
-                    <div id="generoFilme">
-                        <ul>
-                            <li>Ficção Científica</li>
-                            <li>Drama</li>
-                            <li>Família</li>
-                        </ul>
-                    </div>
-                </div>
-                     
-            </Content>
-
-            <Content>
-                <div id="conteudo">
-                    <div>
-                        <h2>Interestellar</h2>
-                    </div>
-
-                    <div id="estrela">
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-
-                        <div>
-                            <AiOutlineStar/>
-                        </div>
-                    </div>
-
-                    <p>
-                        Pragas nas colheitas fizeram a civilização humana regredir para uma sociedade agrária em futuro de data desconhecida. Cooper, ex-piloto da NASA, tem uma fazenda com a sua familia. Murphy, a filha de dez anos de Cooper, acredita que seu quarto está assombrado por um fantasma que tenta se...
-                    </p>
-
-                    <div id="generoFilme">
-                        <ul>
-                            <li>Ficção Científica</li>
-                            <li>Drama</li>
-                            <li>Família</li>
-                        </ul>
-                    </div>
-                </div>
-                     
-            </Content>
         </Container>
-        
+
     )
 }

@@ -13,10 +13,10 @@ export const Container = styled.section`
 
     > .divMarcadores {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         background-color: black;
         width: 100%;
-        height: 88px;
         border-radius: 8px;
     }
 `
