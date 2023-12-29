@@ -1,5 +1,5 @@
 import {createContext, useContext, useState, useEffect} from 'react';
-import {api} from '../../../desafio-aplicacao-node/src/services/api'
+import {api} from '../../src/services/api'
 export const AuthContext = createContext({})
 
 function AuthProvider({children}){
