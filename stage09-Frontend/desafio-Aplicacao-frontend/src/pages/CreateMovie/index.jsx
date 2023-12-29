@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useState } from 'react'
 import { NoteItem } from '../../components/NoteItem';
-import { api } from '../../../../desafio-aplicacao-node/src/services/api'
+import { api } from '../../services/api'
 import { useAuth } from '../../hooks/auth'
 import { SignIn } from '../SignIn/SignIn'
 

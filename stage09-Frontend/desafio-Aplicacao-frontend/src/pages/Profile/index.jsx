@@ -8,7 +8,7 @@ import {AiOutlineArrowLeft } from "react-icons/ai";
 import { useState } from 'react';
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 import {useAuth} from '../../hooks/auth';
-import {api} from '../../../../desafio-aplicacao-node/src/services/api'
+import {api} from '../../services/api'
 
 export function Profile() {
 

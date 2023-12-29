@@ -1,13 +1,12 @@
 import {useState} from "react"
 import {Container, Form, ImageForm} from './styles.js'
 import {Button} from '../../components/Button'
-import {ButtonText} from '../../components/ButtonText'
 import {Input} from '../../components/Input'
 import {FiUser,FiMail, FiLock } from 'react-icons/fi'
 import {Link, useNavigate} from 'react-router-dom';
 import {AiOutlineArrowLeft } from "react-icons/ai";
 
-import {api} from '../../../../desafio-aplicacao-node/src/services/api.js'
+import {api} from '../../services/api.js'
 
 
 

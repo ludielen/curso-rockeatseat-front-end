@@ -4,7 +4,7 @@ import { VscAdd } from "react-icons/vsc"
 import { AiOutlineStar } from "react-icons/ai";
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { api } from '../../../../desafio-aplicacao-node/src/services/api'
+import { api } from '../../services/api'
 
 export function Home() {
     const [movies, setMovies] = useState([])

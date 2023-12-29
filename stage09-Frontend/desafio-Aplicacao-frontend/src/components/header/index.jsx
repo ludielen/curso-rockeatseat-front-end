@@ -1,7 +1,7 @@
 import { RiShutDownLine } from 'react-icons/ri'
 import { Container, Profile, Logout, Search } from './style'
 import { useAuth } from '../../hooks/auth'
-import { api } from '../../../../desafio-aplicacao-node/src/services/api'
+import { api } from '../../services/api'
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg'
 import { useEffect, useState } from 'react'
 import { AiFillTags } from 'react-icons/ai'
