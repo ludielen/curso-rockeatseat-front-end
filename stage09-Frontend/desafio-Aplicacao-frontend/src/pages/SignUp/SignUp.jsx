@@ -1,6 +1,6 @@
 import {useState} from "react"
 import {Container, Form, ImageForm} from './styles.js'
-import {Button} from '../../components/Button/index.jsx'
+import {Button} from '../../components/Button'
 import {Input} from '../../components/Input'
 import {FiUser,FiMail, FiLock } from 'react-icons/fi'
 import {Link, useNavigate} from 'react-router-dom';
