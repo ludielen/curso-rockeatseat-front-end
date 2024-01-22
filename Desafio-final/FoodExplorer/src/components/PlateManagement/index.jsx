@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { Button } from '../../components/Button'
 import { Textarea } from "../Textarea"
-import { toast } from 'react-toastify';
 
 export function PlateManagement({ plateToEdit, platePicture }) {
     const [plate_title, setTitle] = useState("")
