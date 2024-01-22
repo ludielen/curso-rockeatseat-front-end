@@ -4,7 +4,7 @@ export function MyFooter() {
     return(
         <Footer>
             <div>
-                <img src="/src/assets/logo-footer.svg" alt="logo-footer" />
+                <img src="/assets/logo-footer.svg" alt="logo-footer" />
                 <p> food explorer</p>
             </div>
 

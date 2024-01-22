@@ -19,7 +19,7 @@ export function SignIn() {
     return (
         <Container>
             <div className='title'>
-                <img src="/src/assets/logo-food-explorer.svg" alt="logo-food-explorer" />
+                <img src="/assets/logo-food-explorer.svg" alt="logo-food-explorer" />
                 <h1>Food Explorer</h1>
             </div>
 

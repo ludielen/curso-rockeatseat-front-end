@@ -21,7 +21,7 @@ export function Header({ setPlatesFiltered }) {
     return (
         <Container>
             <div>
-                <img src="/src/assets/logo-food-explorer.svg" alt="logo-food-explorer" />
+                <img src="/assets/logo-food-explorer.svg" alt="logo-food-explorer" />
                 <h1>Food Explorer</h1>
                 {isAdmin === "true" && <span>admin</span>}
 

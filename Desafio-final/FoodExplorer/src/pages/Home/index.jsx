@@ -46,7 +46,7 @@ export function Home() {
 
             <Content>
 
-                <img src="/src/assets/macarron.svg" alt="macarrons" />
+                <img src="/assets/macarron.svg" alt="macarrons" />
                 <div className='homeParentBanner'>
 
 
