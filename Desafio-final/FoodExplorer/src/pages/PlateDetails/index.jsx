@@ -5,7 +5,7 @@ import { ButtonText } from '../../components/ButtonText';
 import { Ingredient } from '../../components/Ingredient';
 import { Button } from '../../components/Button';
 import { FaMinus, FaPlus } from 'react-icons/fa';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 
@@ -14,7 +14,6 @@ export function PlateDetails(props) {
     const location = useLocation();
     const isAdmin = localStorage.getItem("@foodexplorer:isAdmin");
     const [plateNumber, setPlateNumber] = useState(0);
-
     const plate = location.state.data?.plate;
     const plate_picture = location.state.platePictureLoaded;
 

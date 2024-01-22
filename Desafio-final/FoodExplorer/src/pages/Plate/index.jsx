@@ -86,7 +86,9 @@ export function Plate({ plate }) {
                         {isAdmin === "false" ? (
                             <>
                                 <FaMinus onClick={handleDecrease} /> {plateNumber} <FaPlus onClick={handleIncrement} />
-                                <Button title="incluir" onClick={handlerAddItem} />
+                                <Link to="/plateDetails" state={{ data: { plate }, platePictureLoaded }}>
+                                    <Button title="incluir" />
+                                </Link>
                             </>
                         ) : null}
                     </div>

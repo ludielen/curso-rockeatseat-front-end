@@ -7,7 +7,7 @@ export function Button({ title, imgAdress, amount, onClick }) {
            {imgAdress && <img src={imgAdress} alt="icon-pedidos" />}
 
             {title}
-            {amount && ` - R$ ${amount.toFixed}`} 
+            {amount && ` - R$ ${amount}`} 
         </Container>
     )
 }
