@@ -1,11 +1,9 @@
 import { Container, Content } from './styles'
-import { Header } from '../../components/header'
-
-
 import { PlateManagement } from '../../components/PlateManagement'
 import { ButtonText } from '../../components/ButtonText'
 import { MyFooter } from '../../components/Footer'
 import { Link } from 'react-router-dom'
+import { Header } from '../../components/Header'
 
 export function CreatePlate() {
     return (
@@ -14,7 +12,7 @@ export function CreatePlate() {
 
             <main>
                 <Content>
-                    <div className='primeira'>
+                    <div className='primeira' >
                         <Link to="/">
                             <ButtonText title="Voltar" />
                         </Link>
