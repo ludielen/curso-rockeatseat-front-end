@@ -1,5 +1,5 @@
 import { Container } from './styles';
-import { Header } from '../../components/header';
+import { Header } from '../../components/Header';
 import { MyFooter } from '../../components/Footer';
 import { ButtonText } from '../../components/ButtonText';
 import { Ingredient } from '../../components/Ingredient';

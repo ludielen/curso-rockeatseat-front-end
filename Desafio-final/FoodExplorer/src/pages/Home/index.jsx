@@ -1,5 +1,5 @@
 import { Container, Content } from './styles'
-import { Header } from '../../components/header'
+import { Header } from '../../components/Header'
 import { useState, useEffect } from 'react'
 import { api } from '../../services/api'
 import { Slider } from '../../components/Slider'

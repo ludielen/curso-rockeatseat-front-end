@@ -1,5 +1,5 @@
 import { Container, Content } from './styles'
-import { Header } from '../../components/header'
+import { Header } from '../../components/Header'
 
 
 import { PlateManagement } from '../../components/PlateManagement'
